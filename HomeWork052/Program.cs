@@ -23,8 +23,7 @@ int SumOddPosition(int[] array)
            sum = array[i] + sum;
         }
         i++;  
-    }
-       
+    }       
     return sum;
 }
 
