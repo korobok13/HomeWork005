@@ -13,11 +13,11 @@ System.Console.WriteLine("Разница между максимальным и 
 
 double minNum(double[] array)
 {
-    min = 0;
+    double min = array[0];
     int i = 0;
     while(i < array.Length - 1)
     {
-        if(array[i] < array[0])
+        if(array[i] < min)
         {
             min = array[i];
         }
@@ -25,8 +25,7 @@ double minNum(double[] array)
     }
 
     return min;
-}
-
+}                            
 
 double maxNum(double[] array)
 {
