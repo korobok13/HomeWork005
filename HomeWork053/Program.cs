@@ -3,10 +3,14 @@
 
 // [3 7 22 2 78] -> 76
 
-var array = FillArray(10);
+var array = FillArray(4);
 Print(array);
 double min = minNum(array);
 double max = maxNum(array);
+System.Console.WriteLine();
+System.Console.WriteLine();
+System.Console.WriteLine("Минимальное число ->" +(min));
+System.Console.WriteLine("Максимальное число ->" +(max));
 System.Console.WriteLine();
 System.Console.WriteLine("Разница между максимальным и минимальным числом -> "+(max - min));
 
@@ -15,9 +19,9 @@ double minNum(double[] array)
 {
     double min = array[0];
     int i = 0;
-    while(i < array.Length - 1)
+    while(i < array.Length)
     {
-        if(array[i] < min)
+        if(array[i] <= min)
         {
             min = array[i];
         }
@@ -29,11 +33,11 @@ double minNum(double[] array)
 
 double maxNum(double[] array)
 {
-    max = 0;
+    double max = array[0];
     int i = 0;
-    while(i < array.Length - 1)
+    while(i < array.Length)
     {
-        if(array[i] > array[0])
+        if(array[i] >= max)
         {
             max = array[i];
         }
